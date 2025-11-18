@@ -1,0 +1,79 @@
+{
+    "General": {
+      "DomainName": "CONTOSO.LOCAL",
+      "ReportName": "DirSentinel baseline check"
+    },
+    "Checks": {
+      "PrivilegedGroups": {
+        "Enabled": true,
+        "Groups": [
+          {
+            "Name": "Domain Admins",
+            "DisplayName": "Domain Admins (Tier 0)",
+            "ApprovedMembers": [
+              "CONTOSO\\Administrator",
+              "CONTOSO\\Svc_DomainAdmin"
+            ]
+          },
+          {
+            "Name": "Enterprise Admins",
+            "DisplayName": "Enterprise Admins (Tier 0)",
+            "ApprovedMembers": [
+              "CONTOSO\\Administrator"
+            ]
+          },
+          {
+            "Name": "Schema Admins",
+            "DisplayName": "Schema Admins",
+            "ApprovedMembers": [
+              "CONTOSO\\Administrator"
+            ]
+          }
+        ]
+      },
+      "Kerberos": {
+        "Enabled": true,
+        "Settings": [
+          {
+            "Name": "Kerberos Supported Encryption Types",
+            "RegistryPath": "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
+            "ValueName": "SupportedEncryptionTypes",
+            "ExpectedDword": 2147483644
+          }
+        ]
+      },
+      "NTLM": {
+        "Enabled": true,
+        "Settings": [
+          {
+            "Name": "LM Compatibility Level",
+            "RegistryPath": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
+            "ValueName": "LmCompatibilityLevel",
+            "ExpectedDword": 5
+          }
+        ]
+      },
+      "Logging": {
+        "Enabled": true,
+        "AuditSubcategories": [
+          {
+            "Name": "Logon",
+            "IncludeSuccess": true,
+            "IncludeFailure": true
+          },
+          {
+            "Name": "Account Logon",
+            "IncludeSuccess": true,
+            "IncludeFailure": true
+          }
+        ]
+      },
+      "InsecureProtocols": {
+        "Enabled": true,
+        "Llmnr": {
+          "Disable": true
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,57 @@
+[
+    {
+      "Category": "PrivilegedGroups",
+      "Name": "Domain Admins (Tier 0)",
+      "Status": "Warning",
+      "CurrentValue": "CONTOSO\\Administrator, CONTOSO\\Svc_DomainAdmin, CONTOSO\\Bob",
+      "DesiredValue": "Approved: CONTOSO\\Administrator, CONTOSO\\Svc_DomainAdmin",
+      "Details": "Unexpected members: CONTOSO\\Bob",
+      "Timestamp": "2025-11-17T13:05:22.1234567+00:00"
+    },
+    {
+      "Category": "PrivilegedGroups",
+      "Name": "Enterprise Admins (Tier 0)",
+      "Status": "OK",
+      "CurrentValue": "CONTOSO\\Administrator",
+      "DesiredValue": "Approved: CONTOSO\\Administrator",
+      "Details": "All members are approved.",
+      "Timestamp": "2025-11-17T13:05:23.2345678+00:00"
+    },
+    {
+      "Category": "Kerberos",
+      "Name": "Kerberos Supported Encryption Types",
+      "Status": "OK",
+      "CurrentValue": 2147483644,
+      "DesiredValue": 2147483644,
+      "Details": "Already compliant.",
+      "Timestamp": "2025-11-17T13:05:24.3456789+00:00"
+    },
+    {
+      "Category": "NTLM",
+      "Name": "LM Compatibility Level",
+      "Status": "NotCompliant",
+      "CurrentValue": 3,
+      "DesiredValue": 5,
+      "Details": "Would set to 5 in Apply mode.",
+      "Timestamp": "2025-11-17T13:05:25.4567890+00:00"
+    },
+    {
+      "Category": "Logging",
+      "Name": "Logon",
+      "Status": "Changed",
+      "CurrentValue": "No auditing",
+      "DesiredValue": "Success and Failure",
+      "Details": "Updated audit policy.",
+      "Timestamp": "2025-11-17T13:05:26.5678901+00:00"
+    },
+    {
+      "Category": "InsecureProtocols",
+      "Name": "Disable LLMNR",
+      "Status": "NotCompliant",
+      "CurrentValue": null,
+      "DesiredValue": 0,
+      "Details": "Would set EnableMulticast=0 in Apply mode.",
+      "Timestamp": "2025-11-17T13:05:27.6789012+00:00"
+    }
+  ]
+  
