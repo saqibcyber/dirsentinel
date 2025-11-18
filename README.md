@@ -1,6 +1,6 @@
 # DirSentinel
 
-![banner](./dirsentinel-banner.png)
+![banner](./banner.png)
 
 **DirSentinel** is a PowerShell-based automation tool that applies a set of core Active Directory and Windows security hardening actions. It supports **audit mode** (check only) and **apply mode** (configurable changes with backups), uses a single JSON configuration file, and generates both logs and structured reports.
 
