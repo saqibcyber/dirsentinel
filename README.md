@@ -1,4 +1,4 @@
-# DirSentinel
+# dirsentinel
 
 ![banner](./banner.png)
 
