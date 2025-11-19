@@ -2,23 +2,14 @@
 
 ![banner](./banner.png)
 
-**DirSentinel** is a PowerShell-based automation tool that applies a set of core Active Directory and Windows security hardening actions. It supports **audit mode** (check only) and **apply mode** (configurable changes with backups), uses a single JSON configuration file, and generates both logs and structured reports.
-
----
+**DirSentinel** is a purpose-built PowerShell toolkit that streamlines the hardening of domain-joined systems in Active Directory environments. It automatically evaluates machines against **MSFT and CIS baselines**, detects common vulnerabilties, and produces structured JSON reports with clear, actionable remediation guidance.
 
 ## Features
-
-- Clean module-based structure (`Core`, `AD`, `Security`)
-- Single JSON configuration file defining all checks and desired states
-- Audit mode for validation without modification
-- Apply mode for enforcing configuration
-- Automatic creation of logs, reports, and registry/setting backups
-- Avoids reapplying settings that are already compliant
-- Covers several foundational AD security tasks:
-  - Privileged group membership checks
-  - Kerberos and NTLM registry policy verification
-  - Basic Windows audit policy configuration
-  - LLMNR and other insecure protocol settings
+- Automated discovery of AD and Windows security misconfigurations  
+- Recommendations mapped to CIS Baselines and Microsoft hardening guidance  
+- Enforcement mode with safe rollbacks and configuration backups  
+- JSON reporting and log output for audit trails and trend tracking  
+- Idempotent execution—no unnecessary re-applies on compliant settings  
 
 ---
 
